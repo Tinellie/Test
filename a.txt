@@ -5,3 +5,4 @@ TEST
 TESTgit log --oneline --all --graphgit log --oneline --all --graphgit log --oneline --all --graph
 114514
 3
+5
