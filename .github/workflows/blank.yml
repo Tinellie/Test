@@ -23,7 +23,7 @@ jobs:
           commits=$(git log --format=%B -n 10) # 获取最近 10 个提交的信息
           
           # 查找并关闭与关键字匹配的 issue
-          echo "$commits" | grep -oE 'close[sd]? #[0-9]+' | while read -r line; do
+          echo "$commits" | grep -oE '(close(s|d)?|fix(ed|es)?|resolve(s|d)?) #[0-9]+' | while read -r line; do
             issue_number=$(echo "$line" | grep -oE '[0-9]+')
             echo "Closing issue #$issue_number"
             curl -X PATCH \
