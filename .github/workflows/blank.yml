@@ -3,7 +3,7 @@ name: Close Issues on Push
 on:
   push:
     branches:
-      - master  # 或者你想要监控的其他分支
+      - dev
 
 jobs:
   close-issues:
